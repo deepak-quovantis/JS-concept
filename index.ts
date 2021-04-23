@@ -1,23 +1,19 @@
 // Import stylesheets
 import "./style.css";
+import { BubbleSort } from "./shared/bubbleSort";
+import { SelectionSort } from "./shared/selectionSort";
 
-//Bubble Sort Algorithm
-let bubbleSort = (arr): any => {
-  let arrLength = arr.length;
-  for (let i = arrLength - 1; i >= 0; i--) {
-    for (let j = 0; j <= i; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
-    }
-  }
-  return arr;
-};
+var a = [55, 4, 3, 4, 1, 7, 6, 8];
 
-var a = [55, 4, 3, 4, 1, 7, 6, 9];
-console.log(bubbleSort(a));
+//Bubble Sort
+// let bs = new BubbleSort();
+// console.log("Bubble Sort");
+// console.log(bs.bubbleSort(a));
+
+//Selection Sort
+let sel = new SelectionSort();
+console.log("Selection Sort");
+console.log(sel.selectionSort(a));
 
 const appDiv: HTMLElement = document.getElementById("app");
 appDiv.innerHTML = `<h1>Open Console</h1>`;
